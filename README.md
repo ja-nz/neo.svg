@@ -9,3 +9,7 @@ Start building crazy [browser graffitis](https://smashingmagazine.com/2015/05/wh
 Set the path to the snip directory:
 
 `let g:neosnippet#snippets_directory='Shougo/neosnippet-snippets/neosnippets, ja-nz/neo.svg'`
+
+Make sure to auto expand the word boundary:
+
+`let g:neosnippet#expand_word_boundary = 1`
