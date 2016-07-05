@@ -6,6 +6,6 @@ Start building crazy [browser graffitis](https://smashingmagazine.com/2015/05/wh
 
 ## Installation
 
-Set the path to the snip file:
+Set the path to the snip directory:
 
 `let g:neosnippet#snippets_directory='Shougo/neosnippet-snippets/neosnippets, ja-nz/neo.svg"`
