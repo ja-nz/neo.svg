@@ -1,2 +1,11 @@
-snippet feflood
-    <feflood flood-color="${1}" result="${2}"></feflood>
+"FILTER https://w3.org/TR/filter-effects/
+
+snippet     filter
+  <filter id="${1:#:filterID}" class="${2:#:filterCLASS}" style="${3:#:inlinestyles}" x="${4:-10%}" y="${5:-10%}" width="${6:120%}" height="${7:120%}" filterUnits="${8:objectBoundingBox}" primitiveUnits="${9:userSpaceOnUse}">
+  ${10}
+  </filter>
+
+snippet     feflood
+  <feflood flood-color="${1}" result="${2}"></feflood>
+
+
