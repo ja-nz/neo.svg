@@ -1,7 +1,12 @@
+snippet     defs
+  <defs ${1:#:id=""} ${2:#:class=""} ${3:#:style=""}>
+  ${4}
+  </defs>
+
 "FILTER https://w3.org/TR/filter-effects/
 
 snippet     filter
-  <filter id="${1:#:filterID}" class="${2:#:filterCLASS}" style="${3:#:inlinestyles}" x="${4:-10%}" y="${5:-10%}" width="${6:120%}" height="${7:120%}" filterUnits="${8:objectBoundingBox}" primitiveUnits="${9:userSpaceOnUse}">
+  <filter id="${1:#:filterID}" ${2:#:class=""} ${3:#:style=""} x="${4:-10%}" y="${5:-10%}" width="${6:120%}" height="${7:120%}" filterUnits="${8:objectBoundingBox}" primitiveUnits="${9:userSpaceOnUse}">
   ${10}
   </filter>
 
