@@ -1,16 +1,28 @@
+# Container Snippets
+Style, transform and event attributes left out for the sake of brevity.
+
+snippet     svg
+  <svg id="${1:#:svgID}" width="${2:auto}" height="${3:auto}" viewBox="${4:#:<min-x> <min-y> <width> <height>}" preserveAspectRatio="${5:xMidYMid meet}" zoomAndPan="${6:disable}">
+    ${7}
+  </svg>
+
 snippet     defs
-  <defs ${1:#:id=""} ${2:#:class=""} ${3:#:style=""}>
-  ${4}
+  <defs ${1:#:id=""}>
+   ${2}
   </defs>
 
-"FILTER https://w3.org/TR/filter-effects/
+# FILTER https://w3.org/TR/filter-effects/
+Style, transform and event attributes left out for the sake of brevity.
 
 snippet     filter
-  <filter id="${1:#:filterID}" ${2:#:class=""} ${3:#:style=""} x="${4:-10%}" y="${5:-10%}" width="${6:120%}" height="${7:120%}" filterUnits="${8:objectBoundingBox}" primitiveUnits="${9:userSpaceOnUse}">
-  ${10}
+  <filter id="${1:#:filterID}" x="${2:-10%}" y="${3:-10%}" width="${4:120%}" height="${5:120%}" filterUnits="${6:objectBoundingBox}" primitiveUnits="${7:userSpaceOnUse}">
+    ${8}
   </filter>
 
 snippet     feflood
-  <feflood flood-color="${1}" result="${2}"></feflood>
+  <feflood flood-color="${1:#:red/HEX}" result="COLOR-${2:#:red}"></feflood>
+  ${3}
+
+
 
 
