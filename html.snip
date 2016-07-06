@@ -6,10 +6,25 @@ snippet     svg
     ${7}
   </svg>
 
+snippet     g
+  <g id="${1:#:gID}">
+    ${2}
+  </g>
+  ${3}
+
 snippet     defs
-  <defs ${1:#:id=""}>
+  <defs ${1:#:id="defsID"}>
    ${2}
   </defs>
+  ${3}
+
+snippet     title
+  <title ${1:#:lang=""}>${2}</title>
+  ${3}
+
+snippet     desc
+  <desc ${1:#:lang=""}>${2}</desc>
+  ${3}
 
 # FILTER https://w3.org/TR/filter-effects/
 Style, transform and event attributes left out for the sake of brevity.
