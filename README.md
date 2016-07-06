@@ -10,7 +10,7 @@ I use the [neosnippet.vim](https://github.com/Shougo/neosnippet.vim) engine.
 
 Set the path to the snip directory:
 
-`let g:neosnippet#snippets_directory='.../Shougo/neosnippet-snippets/neosnippets, .../ja-nz/neo.svg'`
+`let g:neosnippet#snippets_directory='.../Shougo/neosnippet-snippets/neosnippets, .../ja-nz/svg.snippets'`
 
 Make sure to auto expand the word boundary:
 
