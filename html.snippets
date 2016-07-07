@@ -1,33 +1,64 @@
-# Container snippets
-# Style, transform and event attributes omitted for the sake of brevity.
+# UTILITY snippets
+# #<expand> -> id="${1}"${2}
+# .<expand> -> class="${1}"${2}
+# lang<expand>-> lang="${1}"${2}
+
+snippet     instyle
+  style="${1}"${2}
+
+# CONTAINER snippets 
 
 snippet     svg
-  <svg id="${1:#:svgID}" width="${2:auto}" height="${3:auto}" viewBox="${4:#:<min-x> <min-y> <width> <height>}" preserveAspectRatio="${5:xMidYMid meet}" zoomAndPan="${6:disable}">
+  <svg ${1:#:id class style transform x y} width="${2:auto}" height="${3:auto}" viewBox="${4:#:<min-x> <min-y> <width> <height>}" preserveAspectRatio="${5:xMidYMid meet}" zoomAndPan="${6:disable}">
     ${7}
   </svg>
 
 snippet     g
-  <g id="${1:#:gID}">
+  <g id="${1:#:id class style}">
     ${2}
   </g>
   ${3}
 
 snippet     defs
-  <defs ${1:#:id="defsID"}>
+  <defs ${1:#:id class style}>
    ${2}
   </defs>
   ${3}
 
+snippet     symbol
+  <symbol ${1:#:id class style} viewBox="${2:#:<min-x> <min-y> <width> <height>}" preserveAspectRatio="${3:xMidYMid meet}" refX="${4:0}" refY="${5:0}">
+    ${6}
+  </symbol>
+  ${7}
+
+
+# DESCRIPTIVE CHILD snippets
+
 snippet     title
-  <title ${1:#:lang=""}>${2}</title>
+  <title ${1:#:id class style}>${2}</title>
   ${3}
 
 snippet     desc
-  <desc ${1:#:lang=""}>${2}</desc>
+  <desc ${1:#:id class style}>${2}</desc>
   ${3}
 
-# Filter snippets
-# Style, transform and event attributes left out for the sake of brevity.
+# GRAPHICS snipptes
+
+snippet     use
+  <use ${1:#:id class style} x="${2:o}" y="${3:0}" width="${4:100%}" height="${5:100%}" href="${6}">
+    ${7}
+  </use>
+  ${8}
+
+# Switch render. Evalutates childs attributes 'requiredExtensions' and 'systemLanguage'
+
+snippet     switch
+  <switch ${1:#:id class style}>
+    ${2}
+  </switch>
+  ${3}
+
+# FILTER snippets
 
 snippet     filter
   <filter id="${1:#:filterID}" x="${2:-10%}" y="${3:-10%}" width="${4:120%}" height="${5:120%}" filterUnits="${6:objectBoundingBox}" primitiveUnits="${7:userSpaceOnUse}">
