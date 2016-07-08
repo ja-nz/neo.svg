@@ -3,7 +3,7 @@
 # .<expand> -> class="${1}"${2}
 # lang<expand> -> lang="${1}"${2}
 
-snippet     styleimport
+snippet     @style
   <style>@import url(${1});${2}</style>
   ${3}
 
@@ -56,11 +56,47 @@ snippet     use
   ${7}
 
 # Switch render. Evalutates childs attributes 'requiredExtensions' and 'systemLanguage'
-
 snippet     switch
   <switch ${1:#:id class style}>
     ${2}
   </switch>
+  ${3}
+
+# PATH and SHAPES snippets
+# OPTIONAL attribute for all elements: pathlength -> may be useful for animations
+snippet     pathlength
+  pathLength="${1}"${2}
+
+snippet     path
+  <path ${1:#:id class style} d="${2}" />
+  ${3}
+
+snippet     rect
+  <rect ${1:#:id class style} x="${2:0}" y="${3:0}" width="${4:0}" height="${5:0}" rx="${6:auto}" ry="${7:auto}" />
+  ${0}
+
+snippet     circle
+  <circle ${1:#:id class style} cx="${2:0}" cy="${3:0}" r="${4:0}" />
+  ${5}
+
+snippet     ellipse
+  <ellipse ${1:#:id class style} cx="${2:0}" cy="${3:0}" rx="${4:auto}" ry="${5:auto}" />
+  ${6}
+
+snippet     line
+  <line ${1:#:id class style} x1="${2:0}" y1="${3:0}" x2="${4:0}" y2="${5:0}" />
+  ${6}
+
+snippet     polyline
+  <polyline ${1:#:id class style} points="${2}" />
+  ${3}
+
+snippet     polygon
+  <polygon ${1:#:id class style} points="${2}" />
+  ${3}
+
+snippet     mesh
+  <mesh ${1:#:id class style} href="${2}" />
   ${3}
 
 # FILTER snippets
