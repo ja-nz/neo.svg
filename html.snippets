@@ -10,6 +10,10 @@ snippet     @style
   <style>@import url(${1});${2}</style>
   ${3}
 
+snippet     @script
+  <script>System.import(${1});${2}</script>
+  ${3}
+
 # for svg and symbol element 
 snippet     viewbox
   viewBox="${1:#:<min-x> <min-y> <width> <height>}" ${2}
@@ -103,6 +107,18 @@ snippet     polygon
 snippet     mesh
   <mesh ${1:#:id class style} href="${2}" />
   ${3}
+
+# TEXT and TSPAN snippets
+
+snippet     text
+  <text ${1:#:id class style} x="${2:0}" y="${3:0}" dx="${4:0}" dy="${5:0}" ${6:#:lengthAdjust="spacing | spacingAndGlyphs"}${7:#:rotate=""}${8:#:textLength=""}>
+    ${9}
+  </text>
+
+snippet     tspan
+  <tspan ${1:#:id class style} x="${2:0}" y="${3:0}" dx="${4:0}" dy="${5:0}" ${6:#:lengthAdjust="spacing | spacingAndGlyphs"}${7:#:rotate=""}${8:#:textLength=""}>
+    ${9}
+  </tspan>
 
 # FILTER snippets
 
